@@ -19,7 +19,8 @@ export default function FormApp() {
       phoneNumber,
       address,
     };
-    console.log();
+
+    console.log(formData);
   }
   return (
     <Formik
@@ -44,70 +45,68 @@ export default function FormApp() {
         });
       }}
     >
-      <Form>
-        <h1 className="flex justify-center items-center m-10">اطلاعات فردی</h1>
-        <div className="container flex flex-col justify-center items-center gap-7">
-          <div className="flex justify-center items-center gap-4">
-            <Field
-              className="border border-black rounded-md"
-              type="number"
-              id="personCode"
-              name="personCode"
-              placeholder="کد پرسنلی"
-            />
-            <Field
-              className="border border-black rounded-md"
-              id="name"
-              name="name"
-              placeholder="نام و نام خانوادگی"
-            />
-            <Field
-              className="border border-black rounded-md"
-              type="number"
-              id="codeMelli"
-              name="codeMelli"
-              placeholder="کد ملی"
-            />
-          </div>
-          <div className="flex justify-center items-center gap-4">
-            <Field
-              className="border border-black rounded-md"
-              type="date"
-              id="birthdayDate"
-              name="birthdayDate"
-              placeholder="تاریخ تولد"
-            />
-            <Field
-              className="border border-black rounded-md"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="ایمیل"
-            />
-            <Field
-              className="border border-black rounded-md"
-              type="number"
-              id="phoneNumber"
-              name="phoneNumber"
-              placeholder="شماره تلفن"
-            />
-          </div>
-          <div className="flex justify-center items-center gap-4">
-            <Field
-              className="border border-black rounded-md"
-              as="textarea"
-              name="address"
-              id="address"
-              placeholder="آدرس"
-              style={{ width: "50%" }}
-            />
-            <button
-              type="submit"
-              className="border-black border p-2 rounded-md"
-            >
-              ثبت نام
-            </button>
-          </div>
+      <Form className="my-0 mx-auto max-w-4xl">
+        <h1 className="flex justify-center items-center mt-20 mb-10 text-xl">
+          اطلاعات فردی
+        </h1>
+        <div className="container grid grid-cols-3 items-center gap-7 ">
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            type="number"
+            id="personCode"
+            name="personCode"
+            placeholder="کد پرسنلی"
+          />
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            id="name"
+            name="name"
+            placeholder="نام و نام خانوادگی"
+          />
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            type="number"
+            id="codeMelli"
+            name="codeMelli"
+            placeholder="کد ملی"
+          />
+
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            type="date"
+            id="birthdayDate"
+            name="birthdayDate"
+            placeholder="تاریخ تولد"
+          />
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            type="email"
+            id="email"
+            name="email"
+            placeholder="ایمیل"
+          />
+          <Field
+            className="border border-gray-500 rounded-md p-2 "
+            type="number"
+            id="phoneNumber"
+            name="phoneNumber"
+            placeholder="شماره تلفن"
+          />
+
+          <Field
+            className="border border-gray-500 rounded-md p-2  col-start-1 col-end-3"
+            as="textarea"
+            name="address"
+            id="address"
+            placeholder="آدرس"
+            style={{ width: "100%" }}
+          />
+          <button
+            type="submit"
+            className="border-gray-500 border p-2 rounded-md col-start-3 col-end-3 max-w-[150px] hover:bg-blue-200 transition"
+          >
+            ثبت نام
+          </button>
         </div>
       </Form>
     </Formik>
