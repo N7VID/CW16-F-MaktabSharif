@@ -1,9 +1,10 @@
+import FormApp from "./components/form/Form";
 import "./index.css";
 
 function App() {
   return (
     <>
-      <div className="text-red-400">Hi</div>
+      <FormApp />
     </>
   );
 }
